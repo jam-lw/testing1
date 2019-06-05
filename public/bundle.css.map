@@ -5,8 +5,8 @@
     "../src/App.svelte"
   ],
   "sourcesContent": [
-    "<script>\n\timport {writable} from \"svelte/store\";\n\timport FunctionPropButton from \"./FunctionPropButton.svelte\";\n\t\n\tconst count = writable(0);\n\n\tconst increment = () => count.update(count => count + 1);\n</script>\n\n<style>\n\th1 {\n\t\tcolor: purple;\n\t}\n</style>\n\n<h1>Hello {$count}!</h1>\n<FunctionPropButton {increment} />\n\n"
+    "<script>\n\timport {writable} from \"svelte/store\";\n\timport IncrementButton from \"./IncrementButton.svelte\";\n\timport ResetButton from \"./ResetButton.svelte\";\n\t\n\tconst count = writable(0);\n\n\tconst increment = () => count.update(count => count + 1);\n\tconst reset = () => count.set(0);\n</script>\n\n<style>\n\th1 {\n\t\tcolor: crimson;\n\t}\n</style>\n\n<h1>Hello {$count}!</h1>\n<IncrementButton {increment} />\n<ResetButton {reset} />\n"
   ],
   "names": [],
-  "mappings": "AAUC,EAAE,cAAC,CAAC,AACH,KAAK,CAAE,MAAM,AACd,CAAC"
+  "mappings": "AAYC,EAAE,eAAC,CAAC,AACH,KAAK,CAAE,OAAO,AACf,CAAC"
 }
