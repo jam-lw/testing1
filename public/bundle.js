@@ -439,7 +439,7 @@ var app = (function () {
     const file$2 = "src/App.svelte";
 
     function create_fragment$2(ctx) {
-    	var h1, t0, t1, t2, t3, t4, current, dispose;
+    	var h1, t0, t1, t2, t3, t4, current;
 
     	var incrementbutton = new IncrementButton({
     		props: { increment: ctx.increment },
@@ -461,10 +461,8 @@ var app = (function () {
     			incrementbutton.$$.fragment.c();
     			t4 = space();
     			resetbutton.$$.fragment.c();
-    			h1.title = foo;
     			h1.className = "svelte-1x3jpwr";
-    			add_location(h1, file$2, 19, 0, 356);
-    			dispose = listen(h1, "click", ctx.click_handler);
+    			add_location(h1, file$2, 17, 0, 337);
     		},
 
     		l: function claim(nodes) {
@@ -525,13 +523,9 @@ var app = (function () {
     			}
 
     			resetbutton.$destroy(detaching);
-
-    			dispose();
     		}
     	};
     }
-
-    const foo = 123;
 
     function instance$2($$self, $$props, $$invalidate) {
     	let $count;
@@ -543,17 +537,7 @@ var app = (function () {
     	const increment = () => count.update(count => count + 1);
     	const reset = () => count.set(0);
 
-    	function click_handler() {
-    		return console.log(foo);
-    	}
-
-    	return {
-    		count,
-    		increment,
-    		reset,
-    		$count,
-    		click_handler
-    	};
+    	return { count, increment, reset, $count };
     }
 
     class App extends SvelteComponentDev {

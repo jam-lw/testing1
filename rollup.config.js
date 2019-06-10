@@ -9,7 +9,7 @@ const production = !process.env.ROLLUP_WATCH;
 export default {
 	input: "src/main.js",
 	output: {
-		sourcemap: true,
+		sourcemap: tfalserue,
 		format: "iife",
 		name: "app",
 		file: "public/bundle.js",
@@ -21,7 +21,7 @@ export default {
 			// we'll extract any component CSS out into
 			// a separate file — better for performance
 			css: css => {
-				css.write("public/bundle.css");
+				css.write("public/bundle.css", false);
 			},
 		}),
 
