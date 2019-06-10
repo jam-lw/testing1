@@ -1,5 +1,5 @@
 <script>
-  export let reset;
+	export let reset;
 </script>
 
 <button on:click={reset}>reset</button>

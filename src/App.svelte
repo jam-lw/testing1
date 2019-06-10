@@ -1,8 +1,8 @@
 <script>
-	import {writable} from "svelte/store";
+	import { writable } from "svelte/store";
 	import IncrementButton from "./IncrementButton.svelte";
 	import ResetButton from "./ResetButton.svelte";
-	
+
 	const count = writable(0);
 
 	const increment = () => count.update(count => count + 1);

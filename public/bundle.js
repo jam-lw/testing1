@@ -299,7 +299,7 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			button.textContent = "increment";
-    			add_location(button, file, 4, 0, 44);
+    			add_location(button, file, 4, 0, 43);
     			dispose = listen(button, "click", ctx.increment);
     		},
 
@@ -372,7 +372,7 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			button.textContent = "reset";
-    			add_location(button, file$1, 4, 0, 40);
+    			add_location(button, file$1, 4, 0, 39);
     			dispose = listen(button, "click", ctx.reset);
     		},
 
@@ -462,7 +462,7 @@ var app = (function () {
     			t4 = space();
     			resetbutton.$$.fragment.c();
     			h1.className = "svelte-1x3jpwr";
-    			add_location(h1, file$2, 17, 0, 336);
+    			add_location(h1, file$2, 17, 0, 337);
     		},
 
     		l: function claim(nodes) {
@@ -531,7 +531,7 @@ var app = (function () {
     	let $count;
 
     	
-    	
+
     	const count = writable(0); validate_store(count, 'count'); subscribe($$self, count, $$value => { $count = $$value; $$invalidate('$count', $count); });
 
     	const increment = () => count.update(count => count + 1);
