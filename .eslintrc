@@ -3,6 +3,5 @@
 	"parserOptions": {
 		"sourceType": "module"
 	},
-	"plugins": ["svelte3"],
-	"rules": { "no-unused-vars": "off" }
+	"plugins": ["svelte3", "html"]
 }
