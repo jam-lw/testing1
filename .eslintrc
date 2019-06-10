@@ -1,9 +1,8 @@
 {
-  "extends": ["plugin:prettier/recommended"],
-  "parserOptions": {
-    "sourceType": "module"
-  },
-  "plugins": [
-    "svelte3"
-  ]
+	"extends": ["plugin:prettier/recommended"],
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"plugins": ["svelte3"],
+	"rules": { "no-unused-vars": "off" }
 }

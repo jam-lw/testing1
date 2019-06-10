@@ -7,6 +7,8 @@
 
 	const increment = () => count.update(count => count + 1);
 	const reset = () => count.set(0);
+
+	const foo = 123;
 </script>
 
 <style>
@@ -15,6 +17,6 @@
 	}
 </style>
 
-<h1>Hello {$count}!</h1>
+<h1 on:click={() => console.log(foo)} title={foo}>Hello {$count}!</h1>
 <IncrementButton {increment} />
 <ResetButton {reset} />
